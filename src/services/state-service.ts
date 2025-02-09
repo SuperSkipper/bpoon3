@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
 
 @Injectable()
 export class stateService {
@@ -9,6 +8,6 @@ export class stateService {
         this.isMobile = isMobile;
     }
     getHandsetMode() {
-        return  this.isMobile;
+        return this.isMobile;
     }
 }

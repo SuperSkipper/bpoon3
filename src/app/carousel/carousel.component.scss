@@ -1,0 +1,9 @@
+#image-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  img {
+    width: 300px;
+    height: 300px;
+  }
+}

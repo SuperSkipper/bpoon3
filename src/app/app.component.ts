@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { 
+import {
   BreakpointObserver,
-  BreakpointState,
   Breakpoints
 } from '@angular/cdk/layout'
 import { takeUntil, Subject } from 'rxjs';
 import { stateService } from '../services/state-service';
+import {CarouselComponent} from './carousel/carousel.component';
 
 @Component({
   selector: 'app-root',
   providers: [stateService],
   templateUrl: './app.component.html',
+  imports: [
+    CarouselComponent
+  ],
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
@@ -31,7 +33,6 @@ export class AppComponent implements OnInit {
     .pipe(takeUntil(this.destroyed))
     .subscribe( result => {
       this.stateService.setHandsetMode(result.matches);
-      console.log(result);
     })
   }
 
