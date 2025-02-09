@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Bodoni Moda';
+    src: url('../public/assets/fonts/Bodoni-Moda.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../public/assets/fonts/Montserrat.ttf') format('truetype');
+    font-weight: 300;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
