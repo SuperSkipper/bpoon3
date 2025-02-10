@@ -1,9 +1,9 @@
 <div>
   <div id="image-container">
-    <img src="assets/images/placeholder.png">
-    <img src="assets/images/placeholder.png">
-    <img src="assets/images/placeholder.png">
-    <img src="assets/images/placeholder.png">
+    <ng-container  *ngFor=" let carouselItem of carouselItems">
+      <img [src]="carouselItem.image">
+    </ng-container>
+
 
   </div>
 </div>
