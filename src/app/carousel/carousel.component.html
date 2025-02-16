@@ -1,9 +1,11 @@
 <div>
-  <div id="image-container">
+  <div id="image-container" #images>
     <ng-container  *ngFor=" let carouselItem of carouselItems">
-      <img [src]="carouselItem.image">
+      <img [src]="carouselItem.image" id="{{carouselItem.title" alt="{{carouselItem.title}}">
     </ng-container>
-
-
+  </div>
+  <div>
+    <button (click)="scroll('left')"> < </button>
+    <button (click)="scroll('right')"> > </button>
   </div>
 </div>
